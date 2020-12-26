@@ -1,1 +1,1 @@
-# CHUG-project-2020
+# CHUG-genome-reduction-project
