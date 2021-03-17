@@ -1,5 +1,4 @@
 #tree line
-`nohup dos2unix 00_seq_folder/*faa 00_seq_folder/Results_01_blast_folder/*`;
 open IN, "iqtree.bd";
 <IN>;
 while (<IN>) {

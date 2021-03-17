@@ -1,4 +1,4 @@
-open IN, "NC-ARSC";
+open IN, "NC-ARSC.txt";
 while (<IN>) {
 	chomp;
 	($full,$one,$three,$carbon_total,$nitrogen_total,$carbon,$nitrogen) = split "\t";

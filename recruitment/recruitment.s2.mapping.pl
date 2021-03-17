@@ -1,7 +1,5 @@
 #select databases
-#example				$dir = "";                $prefix = ""     ; $reads_folder = "/";
-
-#tara					$dir = "22_tara";            $prefix = "fq.gz"; $reads_folder = "/share/database/public_sequencing/TaraOcean____metaG____PRJEB1787/raw_reads";
+#tara					$dir = "22_tara";            $prefix = "fq.gz"; $reads_folder = "/share/database/public_sequencing/TaraOcean____metaG____PRJEB1787";
 #tara RNA				$dir = "22_tara_metaT";      $prefix = "fq.gz"; $reads_folder = "/share/database/public_sequencing/TaraOcean____metaT____PRJEB6608";
 #tara polar				$dir = "22_tara_polar";      $prefix = "fq.gz"; $reads_folder = "/share/database/public_sequencing/TaraOcean_polar____metaG____PRJEB9740/03_trimmed2";
 #tara polar RNA			$dir = "22_tara_polar_metaT";$prefix = "fq.gz"; $reads_folder = "/share/home-user/xyfeng/database/public_sequencing/TaraOcean_polar____metaT____PRJEB9741";
@@ -41,14 +39,9 @@ foreach $srr (@SAMPLE) {
 	print OUT "rm $dir/$srr.sam\n";
 	print OUT "samtools sort -@ $phred $dir/$srr.bam > $dir/$srr.sort.bam\n";
 	print OUT "rm $dir/$srr.bam\n";
-#	print OUT "coverm filter --bam-files $dir/$srr.sort.bam --output-bam-files $dir/$srr.filter.bam --threads $phred --min-read-percent-identity 0.95 --min-read-aligned-percent 0.75\n";
-#	print OUT "coverm contig --bam-files $dir/$srr.filter.bam --threads $phred --methods count > $dir/$srr.coverm.txt\n";
-#	print OUT "samtools depth --reference 01_ref_merged/total.fasta $dir/$srr.filter.bam > $dir/$srr.depth.txt\n";
 	print OUT "samtools fasta -N $dir/$srr.sort.bam > $dir/$srr.mapped.fasta\n";
 	print OUT "blastn -db $query -query $dir/$srr.mapped.fasta -out $dir/$srr.blastn.table -evalue 1e-5 -perc_identity 95 -qcov_hsp_perc 80 -outfmt 6 -num_threads $phred\n";
-#	print OUT "rm $dir/$srr.mapped.fasta\n";
 
 	`chmod +x $script`;
-#	`sbatch $script`;
 	print "nohup sh $script &\n";
 }

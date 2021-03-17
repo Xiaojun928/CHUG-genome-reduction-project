@@ -1,16 +1,6 @@
 `mkdir ptt_fdr.a`;
 @files = `ls *trimai`;
 
-#remove empty, if any
-foreach $file (@files) {
-	chomp $file;
-	open IN, $file;
-	while (<IN>) {
-		if (/>/) {last}
-		else {`rm $file`}
-	}
-}
-
 #	%taxonomy
 @files = `ls *trimai`;
 foreach $file (@files) {
@@ -19,7 +9,6 @@ foreach $file (@files) {
 	while (<IN>) {
 		chomp;
 		unless (s/>//) {next}
-		#($gnm,$og) = split "____";
 		($gnm) = split "__";
 		($og = $file) =~ s/\.trimai//;
 		$TAX{$gnm} = 1;
@@ -36,7 +25,6 @@ foreach $file (@files) {
 	#	main
 	while (<IN>) {
 		chomp;
-		#if (/^>(\S+)____(OG\d+)$/) { ($tax,$og) = ($1,$2) }
 		if (s/>//) {
 			($tax) = split "__";
 			($og = $file) =~ s/\.trimai//;
@@ -51,19 +39,6 @@ foreach $file (@files) {
 		if ($tax{$tax} ne 'done') { $seq{$tax} .= '-' x $len }
 	}
 }
-
-open OUT, ">ptt_fdr.a/concat.txt";
-$end = 0;
-print OUT "#nexus\n";
-print OUT "begin sets;\n";
-for $file (@files) {
-	chomp $file;
-	$file =~ s/.trimai//;
-	$start = $end + 1;
-	$end = $start + $len{$file} - 1;
-	print OUT "\tcharset $file = $start-$end;\n";
-}
-print OUT "end;\n";
 
 open OUT, ">ptt_fdr.a/concat.fasta";
 foreach $tax (keys %TAX) {

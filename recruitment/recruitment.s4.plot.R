@@ -46,7 +46,7 @@ ggplot(genome, aes(x = genome, y = abundance, fill = abundance)) +
 	scale_y_continuous(breaks = c(0,0.7,1,1.7,2,2.7), labels = c("0.0001%","0.0005%","0.001%","0.005%","0.01%","0.05%"))
 
 #TARA correlation
-df <- read.table("ggplot____correlation.txt", header = TRUE, sep = "\t", na.strings = NA)
+df <- read.table("correlation.txt", header = TRUE, sep = "\t", na.strings = NA)
 df <- as.matrix(df)
 rownames(df) <- df[,1]
 df <- df[,-1]

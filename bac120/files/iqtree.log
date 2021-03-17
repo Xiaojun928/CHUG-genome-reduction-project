@@ -1,0 +1,235 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    mgmt.hpcc.com (AVX512, FMA3, 125 GB RAM)
+Command: iqtree -nt 16 -m MFP -bb 1000 -alrt 1000 -s concat.phy -redo -mset WAG,LG,JTT,Dayhoff -mrate E,I,G,I+G -mfreq FU -wbtl -pre iqtree
+Seed:    859018 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Mar 28 09:58:10 2020
+Kernel:  AVX+FMA - 16 threads (40 CPU cores detected)
+
+Reading alignment file concat.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 87 sequences with 45216 columns, 33266 distinct patterns
+28634 parsimony-informative, 4272 singleton sites, 12310 constant sites
+          Gap/Ambiguity  Composition  p-value
+   1  GNM811      3.39%    failed      0.00%
+   2  GNM915      4.56%    failed      1.15%
+   3  GNM1001     2.45%    failed      0.00%
+   4  GNM875      2.48%    failed      0.01%
+   5  GNM858      4.48%    failed      0.00%
+   6  GNM1026     2.95%    passed     62.43%
+   7  GNM1419     3.18%    failed      0.00%
+   8  GNM1130     1.73%    failed      0.00%
+   9  GNM1066     2.53%    failed      0.00%
+  10  GNM683      3.30%    passed      6.11%
+  11  GNM1427     2.56%    passed     34.52%
+  12  GNM1311     7.47%    failed      0.00%
+  13  GNM962      1.64%    failed      0.01%
+  14  GNM1024     2.67%    failed      0.03%
+  15  GNM833      2.76%    failed      0.24%
+  16  GNM1310     4.42%    failed      0.00%
+  17  GNM973      2.48%    failed      0.22%
+  18  GNM1670     2.72%    failed      4.36%
+  19  GNM565      2.42%    failed      0.00%
+  20  GNM786      1.60%    failed      1.71%
+  21  GNM576      0.81%    failed      0.00%
+  22  GNM483      3.07%    failed      0.00%
+  23  GNM1154     2.78%    passed     48.52%
+  24  GNM1031     3.01%    failed      0.00%
+  25  GNM1187     2.04%    failed      4.86%
+  26  GNM1304     4.01%    failed      0.00%
+  27  GNM1089     4.37%    failed      0.00%
+  28  GNM1107    10.39%    failed      0.70%
+  29  GNM1283     5.70%    failed      0.00%
+  30  GNM1213     2.32%    failed      2.35%
+  31  GNM3890     2.86%    passed      5.74%
+  32  GNM1146     2.88%    passed     68.11%
+  33  GNM747      6.10%    passed     90.32%
+  34  GNM444      5.97%    passed      8.27%
+  35  GNM1170     1.33%    passed     52.55%
+  36  GNM1126     2.69%    failed      4.58%
+  37  GNM425      3.49%    failed      0.00%
+  38  GNM926      1.51%    passed     46.22%
+  39  GNM1123     3.14%    failed      0.00%
+  40  GNM1121     0.98%    passed     22.07%
+  41  GNM1363     1.49%    failed      0.21%
+  42  GNM1367     3.16%    failed      0.00%
+  43  GNM1431     1.53%    failed      0.48%
+  44  GNM855      2.85%    failed      0.00%
+  45  GNM1125     6.66%    failed      1.15%
+  46  GNM4440     3.19%    passed     10.46%
+  47  GNM3434     2.82%    failed      3.83%
+  48  GNM653      4.12%    failed      0.00%
+  49  GNM1232     3.10%    passed     65.55%
+  50  GNM694      3.10%    failed      0.47%
+  51  GNM1546     1.18%    passed     12.94%
+  52  GNM358      2.78%    failed      3.83%
+  53  GNM1017     1.42%    failed      0.00%
+  54  GNM495      2.78%    passed     43.01%
+  55  GNM848      1.13%    passed     68.21%
+  56  GNM1362     0.99%    passed      6.39%
+  57  GNM50571    2.78%    failed      3.41%
+  58  GNM1059     2.31%    failed      0.33%
+  59  GNM1097     1.52%    failed      0.00%
+  60  GNM1177     1.21%    passed      9.26%
+  61  GNM594      2.81%    passed     15.04%
+  62  GNM575      2.97%    failed      0.03%
+  63  GNM774      1.57%    failed      0.30%
+  64  GNM773      2.88%    passed      5.97%
+  65  GNM756      1.90%    failed      0.00%
+  66  GNM859      3.54%    failed      0.00%
+  67  GNM1055     1.68%    failed      0.00%
+  68  GNM1179     3.22%    passed     26.16%
+  69  GNM860      2.66%    failed      0.00%
+  70  GNM684      3.45%    passed      7.17%
+  71  GNM1122     1.08%    passed     21.88%
+  72  GNM1025     2.04%    failed      0.00%
+  73  GNM1176     2.20%    passed     23.63%
+  74  GNM717      7.73%    failed      0.00%
+  75  GNM1683     2.73%    failed      3.60%
+  76  GNM1120     2.64%    passed     75.71%
+  77  GNM746      2.51%    passed     20.23%
+  78  GNM1306     2.73%    failed      0.00%
+  79  GNM1080     2.71%    failed      0.00%
+  80  GNM1383     3.36%    passed     75.51%
+  81  GNM1186     0.43%    passed     14.63%
+  82  GNM356      3.24%    passed     11.57%
+  83  GNM742      2.82%    failed      0.00%
+  84  GNM225      2.52%    failed      0.00%
+  85  GNM1382     2.51%    passed     87.99%
+  86  GNM1148     4.42%    passed     43.92%
+  87  GNM791      5.00%    failed      0.00%
+****  TOTAL       2.97%  56 sequences failed composition chi2 test (p-value<5%; df=19)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 1.511 seconds
+NOTE: ModelFinder requires 1916 MB RAM!
+ModelFinder will test 16 protein models (sample size: 45216) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  WAG           2315761.471  171 4631864.941  4631866.247  4633355.926
+  2  WAG+I         2214426.400  172 4429196.799  4429198.121  4430696.503
+  3  WAG+G4        2087369.261  172 4175082.521  4175083.842  4176582.225
+  4  WAG+I+G4      2082115.660  173 4164577.320  4164578.657  4166085.743
+  5  LG            2324901.566  171 4650145.133  4650146.439  4651636.117
+  6  LG+I          2222907.998  172 4446159.996  4446161.318  4447659.700
+  7  LG+G4         2078717.725  172 4157779.450  4157780.771  4159279.154
+  8  LG+I+G4       2073675.389  173 4147696.777  4147698.114  4149205.200
+  9  JTT           2344699.512  171 4689741.023  4689742.329  4691232.008
+ 10  JTT+I         2240043.955  172 4480431.909  4480433.231  4481931.613
+ 11  JTT+G4        2104413.134  172 4209170.268  4209171.590  4210669.972
+ 12  JTT+I+G4      2099117.170  173 4198580.339  4198581.676  4200088.762
+ 13  Dayhoff       2345518.855  171 4691379.711  4691381.017  4692870.695
+ 14  Dayhoff+I     2240566.477  172 4481476.955  4481478.276  4482976.658
+ 15  Dayhoff+G4    2107047.583  172 4214439.166  4214440.487  4215938.870
+ 16  Dayhoff+I+G4  2101516.085  173 4203378.171  4203379.507  4204886.593
+Akaike Information Criterion:           LG+I+G4
+Corrected Akaike Information Criterion: LG+I+G4
+Bayesian Information Criterion:         LG+I+G4
+Best-fit model: LG+I+G4 chosen according to BIC
+
+All model information printed to iqtree.model.gz
+CPU time for ModelFinder: 2640.884 seconds (0h:44m:0s)
+Wall-clock time for ModelFinder: 169.726 seconds (0h:2m:49s)
+Generating 1000 samples for ultrafast bootstrap (seed: 859018)...
+
+NOTE: 1916 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 1.000 / Estimate: 0.235, 0.769 / LogL: -2073675.412
+Init pinv, alpha: 0.030, 1.000 / Estimate: 0.235, 0.770 / LogL: -2073675.386
+Init pinv, alpha: 0.061, 1.000 / Estimate: 0.235, 0.769 / LogL: -2073675.395
+Init pinv, alpha: 0.091, 1.000 / Estimate: 0.235, 0.769 / LogL: -2073675.402
+Init pinv, alpha: 0.121, 1.000 / Estimate: 0.235, 0.770 / LogL: -2073675.385
+Init pinv, alpha: 0.151, 1.000 / Estimate: 0.235, 0.770 / LogL: -2073675.388
+Init pinv, alpha: 0.181, 1.000 / Estimate: 0.235, 0.769 / LogL: -2073675.411
+Init pinv, alpha: 0.212, 1.000 / Estimate: 0.235, 0.770 / LogL: -2073675.387
+Init pinv, alpha: 0.242, 1.000 / Estimate: 0.235, 0.769 / LogL: -2073675.388
+Init pinv, alpha: 0.272, 1.000 / Estimate: 0.235, 0.770 / LogL: -2073675.398
+Optimal pinv,alpha: 0.235, 0.770 / LogL: -2073675.385
+
+Parameters optimization took 268.591 sec
+Computing ML distances based on estimated model parameters... 9.650 sec
+Computing BIONJ tree...
+0.004 seconds
+Log-likelihood of BIONJ tree: -2073831.460
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 164.875 second
+Computing log-likelihood of 98 initial trees ... 137.773 seconds
+Current best score: -2073675.385
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2073147.524
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 6: -2072832.633
+Iteration 10 / LogL: -2073559.983 / Time: 0h:11m:24s
+Iteration 20 / LogL: -2073147.898 / Time: 0h:13m:59s
+Finish initializing candidate tree set (11)
+Current best tree score: -2072832.633 / CPU time: 557.855
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2073007.755 / Time: 0h:16m:45s (0h:43m:54s left)
+Iteration 40 / LogL: -2073042.784 / Time: 0h:19m:1s (0h:32m:12s left)
+Iteration 50 / LogL: -2072905.073 / Time: 0h:21m:14s (0h:24m:17s left)
+Log-likelihood cutoff on original alignment: -2073137.430
+UFBoot trees printed to iqtree.ufboot
+Iteration 60 / LogL: -2072832.636 / Time: 0h:23m:39s (0h:18m:26s left)
+Iteration 70 / LogL: -2072982.531 / Time: 0h:25m:49s (0h:13m:28s left)
+Iteration 80 / LogL: -2072912.434 / Time: 0h:28m:11s (0h:9m:16s left)
+Iteration 90 / LogL: -2072857.148 / Time: 0h:30m:26s (0h:5m:28s left)
+Iteration 100 / LogL: -2073107.299 / Time: 0h:32m:50s (0h:1m:59s left)
+Log-likelihood cutoff on original alignment: -2073137.430
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+UFBoot trees printed to iqtree.ufboot
+TREE SEARCH COMPLETED AFTER 107 ITERATIONS / Time: 0h:34m:37s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2072832.633
+2. Current log-likelihood: -2072832.615
+Optimal log-likelihood: -2072832.612
+Proportion of invariable sites: 0.235
+Gamma shape alpha: 0.770
+Parameters optimization took 2 rounds (4.609 sec)
+BEST SCORE FOUND : -2072832.612
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+7.868 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file iqtree.splits.nex
+Total tree length: 17.523
+
+Total number of iterations: 107
+CPU time used for tree search: 26073.116 sec (7h:14m:33s)
+Wall-clock time used for tree search: 1795.982 sec (0h:29m:55s)
+Total CPU time used: 30745.222 sec (8h:32m:25s)
+Total wall-clock time used: 2090.346 sec (0h:34m:50s)
+UFBoot trees printed to iqtree.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file iqtree.splits.nex...
+87 taxa and 214 splits.
+Consensus tree written to iqtree.contree
+Reading input trees file iqtree.contree
+Log-likelihood of consensus tree: -2072832.612
+
+Analysis results written to: 
+  IQ-TREE report:                iqtree.iqtree
+  Maximum-likelihood tree:       iqtree.treefile
+  Likelihood distances:          iqtree.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iqtree.splits.nex
+  Consensus tree:                iqtree.contree
+  UFBoot trees:                  iqtree.ufboot
+  Screen log file:               iqtree.log
+
+Date and Time: Sat Mar 28 10:36:05 2020

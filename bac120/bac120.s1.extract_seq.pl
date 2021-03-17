@@ -1,5 +1,5 @@
 #bac 120 list
-open IN, "/share/home-user/xyfeng/pipeline/bac120.tsv";
+open IN, "bac120.tsv";
 <IN>;
 while (<IN>) {
 	chomp;
